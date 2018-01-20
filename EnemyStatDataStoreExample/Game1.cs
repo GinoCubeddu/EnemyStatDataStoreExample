@@ -1,4 +1,6 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System;
+using EnemyStatDataStoreExample.Example;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
@@ -12,10 +14,14 @@ namespace EnemyStatDataStoreExample
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+        private AAD AdaptiveAIDirector;
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            // Create new Director
+            AdaptiveAIDirector = new AAD();
         }
 
         /// <summary>
@@ -27,8 +33,11 @@ namespace EnemyStatDataStoreExample
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+            Console.WriteLine("OUTPUT FROM ShowcaseEncounters: ");
+            AdaptiveAIDirector.ShowcaseEncounters();
 
-            base.Initialize();
+            Console.WriteLine("OUTPUT FROM LoadDataFromFile: ");
+            AdaptiveAIDirector.LoadDataFromFile("stats.json");
         }
 
         /// <summary>
@@ -38,7 +47,7 @@ namespace EnemyStatDataStoreExample
         protected override void LoadContent()
         {
             // Create a new SpriteBatch, which can be used to draw textures.
-            spriteBatch = new SpriteBatch(GraphicsDevice);
+            //spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
         }
