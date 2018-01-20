@@ -1,0 +1,22 @@
+{
+  "Encounters": {
+    "archer": {
+      "TotalEncounters": 2,
+      "TotalEncounterTime": 7.45,
+      "TotalPlayerBuletsShot": 19,
+      "TotalPlayerDamage": 65.8,
+      "Encounters": {
+        "1": {
+          "EncounterTime": 3.0,
+          "PlayerBuletsShot": 11,
+          "PlayerDamageTaken": 32.4
+        },
+        "2": {
+          "EncounterTime": 4.45,
+          "PlayerBuletsShot": 8,
+          "PlayerDamageTaken": 33.4
+        }
+      }
+    }
+  }
+}
